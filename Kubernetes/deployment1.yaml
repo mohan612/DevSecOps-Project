@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bus-app
+  labels:
+    app: bus-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bus-app
+  template:
+    metadata:
+      labels:
+        app: bus-app
+    spec:
+      containers:
+      - name: bus-app
+        image: busapp:2.1
+        ports:
+        - containerPort: 80
