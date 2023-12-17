@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: bus-app
-        image: busapp:2.1
+        image: learnitguide/busapp:2.1
         ports:
         - containerPort: 80
